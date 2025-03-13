@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pancake Engineer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .navbar { background-color: red; }
+        .navbar-brand img { height: 40px; margin-right: 10px; }
+        .hero { background: #f8f9fa; padding: 50px 20px; text-align: center; }
+        .card { margin-bottom: 20px; }
+        .grid-section { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 15px; padding: 20px; }
+        .grid-box { background: #ddd; padding: 15px; border-radius: 10px; text-align: center; flex: 1 1 300px; }
+        .awareness-box { background: blue; color: white; padding: 20px; border-radius: 10px; text-align: center; margin-top: 20px; }
+        .card-container { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 15px; }
+        .card-col { flex: 1 1 300px; }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="logo.jpg" alt="Logo"> Pancake Engineer</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mods">Mods</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1>Hello, I am Pancake Engineer!</h1>
+        <p>An Autistic Teenager that makes Indie Games and Mods for Minecraft Forge!</p>
+        <div class="grid-section">
+            <div class="grid-box">
+                <h4>Software I Use</h4>
+                <p>Godot, OBS, GIMP, Visual Studio, VS Code</p>
+            </div>
+            <div class="grid-box">
+                <h4>Programming Languages</h4>
+                <p>Luau, C#, Planning to learn C++</p>
+                <p>Considering Java for MC mods</p>
+            </div>
+            <div class="grid-box">
+                <h4>Interests</h4>
+                <p>Sci-Fi, Space, Technology, 80s & 90s Music</p>
+            </div>
+        </div>
+        <div class="awareness-box">
+            <h2>Autism Awareness</h2>
+            <p>Be kind! Don't just be rude to other people because they have a mental or physical disability! Accept who you are and accept who others around you are!</p>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="container py-5">
+        <h2>Games</h2>
+        <div class="card-container">
+            <div class="card-col">
+                <div class="card">
+                    <img src="game1.jpg" class="card-img-top" alt="Game Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Game Title</h5>
+                        <p class="card-text">Game description here.</p>
+                        <p><strong>Price: $XX</strong></p>
+                        <!-- Itch.io Purchase Button -->
+                        <a href="https://yourgame.itch.io" class="btn btn-primary" target="_blank">Purchase on Itch.io</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+
+    <!-- Mods Section -->
+    <section id="mods" class="container py-5">
+        <h2>Mods</h2>
+        <div class="card-container">
+            <div class="card-col">
+                <div class="card">
+                    <img src="mod1.jpg" class="card-img-top" alt="Mod Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Mod Title</h5>
+                        <p class="card-text">Mod description here.</p>
+                        <p><strong>Price: Free</strong></p>
+                        <!-- Modrinth Download Button -->
+                        <a href="https://modrinth.com/mod/yourmod" class="btn btn-primary" target="_blank">Download on Modrinth</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more mod cards as needed -->
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
