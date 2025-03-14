@@ -14,7 +14,6 @@
             padding: 50px 20px;
             text-align: center;
             color: white;
-            /* Removed min-height */
         }
         .card { margin-bottom: 20px; }
         .grid-section { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 15px; padding: 20px; }
@@ -36,7 +35,7 @@
             width: 32px;
             height: 32px;
         }
-        
+
         .kofi-section {
             flex: 1 1 300px;
             background: #f8f9fa;
@@ -45,30 +44,75 @@
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-    
+
         /* Adjust the iframe size for Ko-fi */
         #kofiframe {
             border: none;
             width: 100%;
-            max-width: 400px; /* Add a maximum width to control the size */
-            height: 500px; /* Adjust the height to make it smaller */
+            max-width: 400px;
+            height: 500px;
             padding: 4px;
             background: #f9f9f9;
         }
-        
+
         .games-mods-container {
             display: flex;
             gap: 20px;
             flex-wrap: wrap;
         }
+
         /* Adjusting margin-top for the Mods section */
         #mods {
-            margin-top: 50px; /* Add margin to push it up from the bottom of the previous section */
+            margin-top: 50px;
         }
-        </style>
+
+        .mod-card {
+            width: 100%;
+            max-width: 300px;
+            margin: 10px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .mod-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .mod-card-body {
+            padding: 15px;
+        }
+
+        .mod-card-body h5 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .mod-card-body p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .mod-card-body .btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .mod-card-body .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
     
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875"
-         crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875"
+     crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Navbar -->
@@ -135,7 +179,33 @@
     <section id="mods" class="container py-5">
         <h2>Mods</h2>
         <p>My mods I make for Minecraft.</p>
-        <p>Coming soon</p>
+
+        <div class="card-container">
+            <div class="mod-card">
+                <img src="mod-image1.jpg" alt="Mod Image 1">
+                <div class="mod-card-body">
+                    <h5>Mod Title 1</h5>
+                    <p>Short description of the mod goes here. This can describe what it adds to the game.</p>
+                    <a href="mod-download-link1.zip" class="btn" download>Download</a>
+                </div>
+            </div>
+            <div class="mod-card">
+                <img src="mod-image2.jpg" alt="Mod Image 2">
+                <div class="mod-card-body">
+                    <h5>Mod Title 2</h5>
+                    <p>Short description of the mod goes here. This can describe what it adds to the game.</p>
+                    <a href="mod-download-link2.zip" class="btn" download>Download</a>
+                </div>
+            </div>
+            <div class="mod-card">
+                <img src="mod-image3.jpg" alt="Mod Image 3">
+                <div class="mod-card-body">
+                    <h5>Mod Title 3</h5>
+                    <p>Short description of the mod goes here. This can describe what it adds to the game.</p>
+                    <a href="mod-download-link3.zip" class="btn" download>Download</a>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
