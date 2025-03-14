@@ -5,17 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pancake Engineer</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <style>
         body { font-family: Arial, sans-serif; }
         .navbar { background-color: red; }
         .navbar-brand img { height: 40px; margin-right: 10px; }
-        .hero { background: #f8f9fa; padding: 50px 20px; text-align: center; }
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?abstract,red,gray') center/cover no-repeat;
+            padding: 50px 20px;
+            text-align: center;
+            color: white;
+        }
+        .hero h1, .hero p { background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 10px; }
         .card { margin-bottom: 20px; }
         .grid-section { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 15px; padding: 20px; }
         .grid-box { background: #ddd; padding: 15px; border-radius: 10px; text-align: center; flex: 1 1 300px; }
         .awareness-box { background: blue; color: white; padding: 20px; border-radius: 10px; text-align: center; margin-top: 20px; }
         .card-container { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 15px; }
         .card-col { flex: 1 1 300px; }
+        .footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .footer a {
+            color: white;
+            margin: 0 10px;
+            font-size: 24px;
+        }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875"
      crossorigin="anonymous"></script>
@@ -74,12 +92,10 @@
                         <h5 class="card-title">Game Title</h5>
                         <p class="card-text">Game description here.</p>
                         <p><strong>Price: $XX</strong></p>
-                        <!-- Itch.io Purchase Button -->
                         <a href="https://yourgame.itch.io" class="btn btn-primary" target="_blank">Purchase on Itch.io</a>
                     </div>
                 </div>
             </div>
-            <!-- Add more cards as needed -->
         </div>
     </section>
 
@@ -94,14 +110,21 @@
                         <h5 class="card-title">Mod Title</h5>
                         <p class="card-text">Mod description here.</p>
                         <p><strong>Price: Free</strong></p>
-                        <!-- Modrinth Download Button -->
                         <a href="https://modrinth.com/mod/yourmod" class="btn btn-primary" target="_blank">Download on Modrinth</a>
                     </div>
                 </div>
             </div>
-            <!-- Add more mod cards as needed -->
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Follow me on social media:</p>
+        <a href="https://www.youtube.com/@yourchannel" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://discord.gg/yourinvite" target="_blank"><i class="fab fa-discord"></i></a>
+        <a href="https://ko-fi.com/yourprofile" target="_blank"><i class="fas fa-coffee"></i></a>
+        <p>&copy; 2025 Pancake Engineer. All rights reserved.</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
