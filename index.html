@@ -15,78 +15,34 @@
             text-align: center;
             color: white;
         }
-        .card { margin-bottom: 20px; }
-        .grid-section { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 15px; padding: 20px; }
-        .grid-box { background: #A9A9A9; padding: 15px; border-radius: 10px; text-align: center; flex: 1 1 300px; }
-        .awareness-box { background: blue; color: white; padding: 20px; border-radius: 10px; text-align: center; margin-top: 20px; }
-        .card-container { display: flex; flex-wrap: wrap; justify-content: flex-start; gap: 15px; }
-        .card-col { flex: 1 1 300px; }
-        .footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-        }
-        .footer a {
-            margin: 0 10px;
-            display: inline-block;
-        }
-        .footer img {
-            width: 32px;
-            height: 32px;
-        }
-        .pixelated {
-            image-rendering: pixelated; /* Ensures pixel art stays sharp */
-            width: 100%; /* Or set to a fixed width/height if desired */
-            height: auto;
-        }
+        .nav-tabs { background: #ddd; padding: 10px; text-align: center; }
+        .nav-tabs .nav-link { margin: 0 10px; }
+        .card-container { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .card-col { flex: 1 1 250px; max-width: 250px; }
+        .card { margin-bottom: 15px; }
+        .footer { background: #222; color: white; text-align: center; padding: 15px; }
+        .footer img { width: 32px; height: 32px; }
+        .pixelated { image-rendering: pixelated; width: 100%; height: auto; }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875"
-     crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875" crossorigin="anonymous"></script>
 </head>
 <body>
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="logo.jpg" alt="Logo"> Pancake Engineer</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#games">Games</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#mods">Mods</a></li>
-                </ul>
-            </div>
         </div>
     </nav>
 
-    <!-- Home Section -->
     <section id="home" class="hero">
         <h1>Hello, I'm Pancake Engineer!</h1>
         <p>An Autistic Teenager that makes Indie Games and Mods for Minecraft Forge!</p>
-        <div class="grid-section">
-            <div class="grid-box">
-                <h4>Software I Use</h4>
-                <p>Godot, OBS, GIMP, Visual Studio, VS Code</p>
-            </div>
-            <div class="grid-box">
-                <h4>Programming Languages</h4>
-                <p>Luau, C#, Java, Planning to learn C++</p>
-            </div>
-            <div class="grid-box">
-                <h4>Interests</h4>
-                <p>Sci-Fi, Space, Technology, 80s & 90s Music</p>
-            </div>
-        </div>
-        <div class="awareness-box">
-            <h2>Autism Awareness</h2>
-            <p>Be kind! Don't just be rude to other people because they have a mental or physical disability! Accept who you are and accept who others around you are!</p>
-        </div>
     </section>
 
-    <!-- Games Section -->
+    <div class="nav-tabs">
+        <a class="btn btn-secondary" href="#games">Games</a>
+        <a class="btn btn-secondary" href="#mods">Mods</a>
+    </div>
+
     <section id="games" class="container py-5">
         <h2>Games</h2>
         <div class="card-container">
@@ -95,8 +51,7 @@
                     <img src="lonedarkness.png" class="card-img-top pixelated" alt="Game Image">
                     <div class="card-body">
                         <h5 class="card-title">Lone Darkness</h5>
-                        <p class="card-text">Survive in the emptiness of outer-space with not much resources left to spare... your beater ship is broken down and needs to be repaired before you run out of oxygen or you will absolutely have no opportunities left... you must make it before the light of death.</p>
-                        <p><strong>Price: $0</strong></p>
+                        <p class="card-text">Survive in the emptiness of outer-space...</p>
                         <a href="https://pancakeengineer755.itch.io/lone-darkness" class="btn btn-primary" target="_blank">Purchase on Itch.io</a>
                     </div>
                 </div>
@@ -104,28 +59,11 @@
         </div>
     </section>
 
-    <!-- Mods Section -->
     <section id="mods" class="container py-5">
         <h2>Mods</h2>
         <p>Coming soon.</p>
-        <!--
-        <div class="card-container">
-            <div class="card-col">
-                <div class="card">
-                    <img src="mod1.jpg" class="card-img-top" alt="No image avaible">
-                    <div class="card-body">
-                        <h5 class="card-title">Mod Title</h5>
-                        <p class="card-text">Mod description here.</p>
-                        <p><strong>Price: Free</strong></p>
-                        <a href="https://modrinth.com/mod/yourmod" class="btn btn-primary" target="_blank">Download on Modrinth</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <p>Follow Me:</p>
         <a href="https://www.youtube.com/@pancake-engineer" target="_blank">
@@ -133,9 +71,6 @@
         </a>
         <a href="https://discord.gg/jKhYNZG3xE" target="_blank">
             <img src="discord-logo.png" alt="Discord">
-        </a>
-        <a href="https://ko-fi.com/pancakeengineer" target="_blank">
-            <img src="kofi-logo.png" alt="Ko-fi">
         </a>
         <p>&copy; 2025 Pancake Engineer. All Rights Reserved.</p>
     </footer>
