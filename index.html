@@ -33,6 +33,9 @@
         body { font-family: Arial, sans-serif; }
         .navbar { background-color: red; }
         .navbar-brand img { height: 40px; margin-right: 10px; }
+        .navbar a { color: white; text-decoration: none; }
+        .navbar a:hover { color: #ddd; }
+
         .hero {
             background: url('herobackground.jpg') no-repeat center center/cover;
             padding: 50px 20px;
@@ -51,6 +54,27 @@
         .hidden { display: none; }
         .modal-dialog { max-width: 600px; }
         .carousel-item img { width: 100%; height: auto; }
+
+        /* About Me Page Style */
+        .about-section {
+            margin-bottom: 30px;
+        }
+        .about-section h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .about-section .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .about-section .card {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875"      crossorigin="anonymous"></script>
 </head>
@@ -58,15 +82,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="logo.jpg" alt="Logo"> Pancake Engineer</a>
-            <div class="navbar-nav ms-auto">
-                <!-- Add Discord and YouTube links to the navbar -->
-                <a class="nav-item nav-link" href="https://www.youtube.com/@pancake-engineer" target="_blank">
-                    <img src="youtube-logo.png" alt="YouTube" style="width: 32px; height: 32px;">
-                </a>
-                <a class="nav-item nav-link" href="https://discord.gg/jKhYNZG3xE" target="_blank">
-                    <img src="discord-logo.png" alt="Discord" style="width: 32px; height: 32px;">
-                </a>
-            </div>
+            <a class="navbar-brand ms-auto" href="about.html">About Me</a>
         </div>
     </nav>
 
@@ -112,32 +128,33 @@
     </footer>
 
     <div class="modal fade" id="gameModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <img id="gameTitleImage" class="pixelated hidden" alt="Game Title Image" style="height: 50px; margin-right: 10px;">
-                    <h5 class="modal-title" id="gameTitle"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img id="gameTitleImage" class="pixelated hidden" alt="Game Title Image" style="height: 50px; margin-right: 10px;">
+                <h5 class="modal-title" id="gameTitle"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner" id="carouselImages"></div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
                 </div>
-                <div class="modal-body">
-                    <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner" id="carouselImages"></div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
-                    </div>
-                    <div class="text-center mt-3">
-                        <p id="gameDescription"></p>
-                        <a id="purchaseLink" class="btn btn-primary" target="_blank">Purchase</a>
-                        <p id="gamePrice" class="mt-2"></p>
-                    </div>
+                <div class="text-center mt-3">
+                    <p id="gameDescription"></p>
+                    <a id="purchaseLink" class="btn btn-primary" target="_blank">Purchase</a>
+                    <p id="gamePrice" class="mt-2"></p>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 
     <script>
         function showSection(section) {
