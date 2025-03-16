@@ -28,7 +28,7 @@
         .modal-dialog { max-width: 600px; }
         .carousel-item img { width: 100%; height: auto; }
     </style>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875" crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875"      crossorigin="anonymous"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -51,7 +51,7 @@
         <h2>Games</h2>
         <div class="card-container">
             <div class="card-col">
-                <div class="card" onclick="openModal('Lone Darkness', ['lonedarkness1.png', 'lonedarkness2.png'], 'https://pancakeengineer755.itch.io/lone-darkness', '$10')">
+                <div class="card" onclick="openModal('Lone Darkness', ['lonedarkness1.png', 'lonedarkness2.png'], 'https://pancakeengineer755.itch.io/lone-darkness', '$10', 'Lone Darkness is a survival game set in the vast emptiness of space. You must gather resources, build shelters, and overcome challenges to survive in the cold void of the universe.')">
                     <img src="lonedarkness.png" class="card-img-top pixelated" alt="Game Image">
                     <div class="card-body">
                         <h5 class="card-title">Lone Darkness</h5>
@@ -96,6 +96,7 @@
                         </button>
                     </div>
                     <div class="text-center mt-3">
+                        <p id="gameDescription"></p>
                         <a id="purchaseLink" class="btn btn-primary" target="_blank">Purchase</a>
                         <p id="gamePrice" class="mt-2"></p>
                     </div>
@@ -111,10 +112,11 @@
             document.getElementById(section).classList.remove('hidden');
         }
 
-        function openModal(title, images, purchaseUrl, price) {
+        function openModal(title, images, purchaseUrl, price, description) {
             document.getElementById('gameTitle').innerText = title;
             document.getElementById('purchaseLink').href = purchaseUrl;
             document.getElementById('gamePrice').innerText = price;
+            document.getElementById('gameDescription').innerText = description;
             
             let carouselInner = document.getElementById('carouselImages');
             carouselInner.innerHTML = '';
