@@ -12,6 +12,8 @@
             height: 100%;
             display: flex;
             flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
         }
 
         .main-content {
@@ -28,10 +30,6 @@
 
         .carousel-inner {
             min-height: 200px;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
         }
 
         .navbar {
@@ -117,19 +115,23 @@
             height: auto;
         }
 
+        /* Center the About Me Section */
         .about-section {
-            margin-bottom: 30px;
+            background: rgba(0, 0, 0, 0.5); /* Dark transparent background for readability */
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
         }
 
         .about-section h3 {
-            text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
 
         .about-section .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            display: flex;
+            justify-content: center;
             gap: 20px;
+            flex-wrap: wrap;
         }
 
         .about-section .card {
@@ -138,6 +140,13 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 300px;
+            width: 100%;
+            color: black;
+        }
+
+        .card p {
+            margin: 0;
         }
     </style>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5905424011610875"
@@ -157,7 +166,7 @@
     </section>
 
     <!-- Add About Me Section Below -->
-    <section class="about-section container py-5">
+    <section class="about-section">
         <h3>About Me</h3>
         <div class="grid">
             <div class="card">
